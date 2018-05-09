@@ -13,7 +13,7 @@ export class RestProvider {
 
   getUsers() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'/users').retry(3).subscribe(data => {
+      this.http.get(this.apiUrl+'/users').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
